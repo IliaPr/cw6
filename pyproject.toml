@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.11"
 django = "^4.2.3"
 django-scheduler = "^0.10.1"
+transliterate = "^1.10.2"
 
 
 [build-system]
