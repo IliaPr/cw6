@@ -23,7 +23,7 @@ class UserListView(PermissionRequiredMixin, ListView):
 class ProfileUpdateView(LoginRequiredMixin, UpdateView):
     model = User
     form_class = CustomUserChangeForm
-    success_url = reverse_lazy('mailing_app:mailing_list')
+    success_url = reverse_lazy('mailing:mailing_list')
 
     def get_object(self, queryset=None):
         return self.request.user
