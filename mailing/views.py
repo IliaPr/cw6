@@ -126,11 +126,11 @@ class MailingDeleteView(UserPassesTestMixin, DeleteView):
 class MessageListView(LoginRequiredMixin, ListView):
     model = Message
 
-    def get_queryset(self):
-        queryset = cache_message(Message, 'message')
-        if self.request.user.has_perm('mailing.set_mailing_status'):
-            return queryset
-        return queryset.filter(user=self.request.user)
+    #def get_queryset(self):
+        #queryset = cache_message(Message, 'message')
+        #if self.request.user.has_perm('mailing.set_mailing_status'):
+            #return queryset
+        #return queryset.filter(user=self.request.user)
 
 
 class MessageCreateView(LoginRequiredMixin, CreateView):
